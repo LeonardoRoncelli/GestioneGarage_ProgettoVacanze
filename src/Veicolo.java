@@ -4,41 +4,33 @@ public class Veicolo {
     private String modello;
     private double peso;
     private int annoImmatricolazione;
-
     public String getTarga() {
         return targa;
     }
-
     public void setTarga(String targa) {
         this.targa = targa;
     }
     public String getMarca() {
         return marca;
     }
-
     public void setMarca(String marca) {
         this.marca = marca;
     }
     public String getModello() {
         return modello;
     }
-
     public void setModello(String modello) {
         this.modello = modello;
     }
-
     public double getPeso() {
         return peso;
     }
-
     public void setPeso(double peso) {
         this.peso = peso;
     }
-
     public int getAnnoImmatricolazione() {
         return annoImmatricolazione;
     }
-
     public void setAnnoImmatricolazione(int annoImmatricolazione) {
         this.annoImmatricolazione = annoImmatricolazione;
     }
