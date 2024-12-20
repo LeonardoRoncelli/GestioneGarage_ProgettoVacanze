@@ -1,13 +1,6 @@
 public class Box {
-    private int numeroBox;
     private String tipologiaBox;
     private boolean isOccupato;
-    public void setNumeroBox(int numeroBox){
-        this.numeroBox=numeroBox;
-    }
-    public int getNumeroBox(){
-        return numeroBox;
-    }
     public void setTipologiaBox(String tipologiaBox){
         this.tipologiaBox=tipologiaBox;
     }
@@ -20,8 +13,7 @@ public class Box {
     public boolean getIsOccupato(){
         return isOccupato;
     }
-    public Box(int numeroBox,String tipologiaBox,boolean isOccupato){
-        this.numeroBox=numeroBox;
+    public Box(String tipologiaBox,boolean isOccupato){
         this.tipologiaBox=tipologiaBox;
         this.isOccupato=isOccupato;
     }
