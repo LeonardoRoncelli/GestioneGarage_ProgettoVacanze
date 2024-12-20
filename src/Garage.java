@@ -9,5 +9,14 @@ public class Garage {
     public int getNumeroBox(){
         return numeroBox;
     }
-    Box []boxes=new Box[numeroBox];
+    Veicolo []boxes=new Veicolo[numeroBox];
+    public String parcheggiaVeicolo(Veicolo veicoloAgg){
+        for(int i=0;i<boxes.length;i++){
+            if(boxes[i]==null){
+                boxes[i]=veicoloAgg;
+                break;
+            }
+        }
+        return "VEICOLO AGGIUNTO CON SUCCESSO";
+    }
 }

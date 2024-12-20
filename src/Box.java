@@ -17,4 +17,8 @@ public class Box {
         this.tipologiaBox=tipologiaBox;
         this.isOccupato=isOccupato;
     }
+    public String toString(){
+        return "Tipologia del box: "+tipologiaBox+"\n"+
+                "Occupato: "+isOccupato;
+    }
 }

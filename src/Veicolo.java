@@ -4,6 +4,13 @@ public class Veicolo {
     private String modello;
     private double peso;
     private int annoImmatricolazione;
+    private double prezzoBox;
+    public void setPrezzoBox(double prezzoBox){
+        this.prezzoBox=prezzoBox;
+    }
+    public double getPrezzoBox(){
+        return prezzoBox;
+    }
     public String getTarga() {
         return targa;
     }
@@ -34,11 +41,20 @@ public class Veicolo {
     public void setAnnoImmatricolazione(int annoImmatricolazione) {
         this.annoImmatricolazione = annoImmatricolazione;
     }
-    public Veicolo(String targa,String marca,String modello,double peso,int annoImmatricolazione){
+    public Veicolo(String targa,String marca,String modello,double peso,int annoImmatricolazione,double prezzoBox){
         this.targa=targa;
         this.marca=marca;
         this.modello=modello;
         this.peso=peso;
         this.annoImmatricolazione=annoImmatricolazione;
+        this.prezzoBox=prezzoBox;
+    }
+    public String toString(){
+        return "Targa del veicolo: "+targa+"\n"+
+                "Marca del veicolo: "+marca+"\n"+
+                "Modello del veicolo: "+modello+"\n"+
+                "Peso del veicolo: "+peso+"\n"+
+                "Anno immatricolazione: "+annoImmatricolazione+"\n"+
+                "Prezzo del box";
     }
 }

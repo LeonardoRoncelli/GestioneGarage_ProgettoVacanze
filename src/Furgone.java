@@ -3,8 +3,8 @@ public class Furgone extends Veicolo{
     private int numeroAssi;
     private double altezzaMax;
     private String alimentazione;
-    public Furgone(String targa,String marca,String modello,double peso,int annoImmatricolazione,double capacitaCarico,int numeroAssi,double altezzaMax,String alimentazione){
-        super(targa, marca, modello, peso, annoImmatricolazione);
+    public Furgone(String targa,String marca,String modello,double peso,int annoImmatricolazione,double prezzoBox,double capacitaCarico,int numeroAssi,double altezzaMax,String alimentazione){
+        super(targa, marca, modello, peso, annoImmatricolazione,prezzoBox);
         this.capacitaCarico=capacitaCarico;
         this.numeroAssi=numeroAssi;
         this.altezzaMax=altezzaMax;
@@ -33,5 +33,11 @@ public class Furgone extends Veicolo{
     }
     public void setAlimentazione(String alimentazione) {
         this.alimentazione = alimentazione;
+    }
+    public String toString(){
+        return "Capacità del carico del furgone: "+capacitaCarico+"\n"+
+                "Numero di assi del furgone: "+numeroAssi+"\n"+
+                "Altezza massima del furgone: "+altezzaMax+"\n"+
+                "Alimentazione del furgone: "+alimentazione;
     }
 }
