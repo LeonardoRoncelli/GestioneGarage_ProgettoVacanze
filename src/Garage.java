@@ -26,4 +26,13 @@ public class Garage {
         }
         return contaOccupati;
     }
+    public int numBoxLiberi(){
+        int contaLiberi=0;
+        for(int i=0;i<boxes.length;i++){
+            if(boxes[i]==null){
+                contaLiberi++;
+            }
+        }
+        return contaLiberi;
+    }
 }

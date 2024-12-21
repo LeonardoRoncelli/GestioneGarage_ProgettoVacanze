@@ -142,6 +142,12 @@ public class TestGarage {
                     System.out.println(" ");
                     break;
                 }
+                case 5:{
+                    System.out.print("Numero di box liberi: ");
+                    System.out.println(garage.numBoxLiberi());
+                    System.out.println(" ");
+                    break;
+                }
             }
         }while (scelta!=0);
     }
