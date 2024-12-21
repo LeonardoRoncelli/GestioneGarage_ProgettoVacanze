@@ -154,6 +154,15 @@ public class TestGarage {
                     targa= input.next();
                     System.out.println("Presenza veicolo: "+garage.ricercaConTarga(targa));
                     System.out.println(" ");
+                    break;
+                }
+                case 2:{
+                    int numBox;
+                    System.out.print("Inserisci il numero del box da liberare: ");
+                    numBox= input.nextInt();
+                    garage.liberaBox(numBox);
+                    System.out.println(" ");
+                    break;
                 }
             }
         }while (scelta!=0);

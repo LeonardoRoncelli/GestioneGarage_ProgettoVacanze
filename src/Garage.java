@@ -45,4 +45,16 @@ public class Garage {
         }
         return isPresente;
     }
+    public void liberaBox(int numBox){
+        if(numBox>=0&&numBox<=500) {
+            if (boxes[numBox] == null) {
+                System.out.println("BOX GIÁ LIBERO!");
+            }else {
+                boxes[numBox] = null;
+                System.out.println("BOX LIBERATO CON SUCCESSO");
+            }
+        }else{
+            System.out.println("BOX INESISTENTE!");
+        }
+    }
 }
