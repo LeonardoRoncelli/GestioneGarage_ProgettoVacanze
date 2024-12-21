@@ -35,9 +35,15 @@ public class Auto extends Veicolo{
         this.tipologia = tipologia;
     }
     public String toString(){
-        return "Numero di porte dell'auto: "+numPorte+"\n"+
-                "Tipo di alimentazione dell'auto: "+alimentazione+"\n"+
-                "Cilindrata dell'auto: "+alimentazione+"\n"+
-                "Tipologia dell'auto: "+tipologia;
+        return "Targa dell'auto: "+getTarga()+"\n"+
+                "Marca dell'auto: "+getMarca()+"\n"+
+                "Modello dell'auto: "+getModello()+"\n"+
+                "Peso dell'auto: "+getPeso()+"\n"+
+                "Anno immatricolazione del veicolo: "+getAnnoImmatricolazione()+"\n"+
+                "Numero di porte del veicolo: "+numPorte+"\n"+
+                "Tipo di alimentazione del veicolo: "+alimentazione+"\n"+
+                "Cilindrata del veicolo: "+cilindrata+"\n"+
+                "Tipologia del veicolo (es.: suv, station wagon...): "+getAnnoImmatricolazione()+"\n"+
+                "Prezzo del box";
     }
 }

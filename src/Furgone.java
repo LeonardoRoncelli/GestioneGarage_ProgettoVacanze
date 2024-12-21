@@ -35,7 +35,12 @@ public class Furgone extends Veicolo{
         this.alimentazione = alimentazione;
     }
     public String toString(){
-        return "Capacità del carico del furgone: "+capacitaCarico+"\n"+
+        return "Targa del furgone: "+getTarga()+"\n"+
+                "Marca del furgone: "+getMarca()+"\n"+
+                "Modello del furgone: "+getModello()+"\n"+
+                "Peso del furgone: "+getPeso()+"\n"+
+                "Anno immatricolazione del furgone: "+getAnnoImmatricolazione()+"\n"+
+                "Capacità del carico del furgone: "+capacitaCarico+"\n"+
                 "Numero di assi del furgone: "+numeroAssi+"\n"+
                 "Altezza massima del furgone: "+altezzaMax+"\n"+
                 "Alimentazione del furgone: "+alimentazione;

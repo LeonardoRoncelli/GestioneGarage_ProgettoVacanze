@@ -1,15 +1,5 @@
 public class Garage {
-    private int numeroBox;
-    public Garage(int numeroBox){
-        this.numeroBox=numeroBox;
-    }
-    public void setNumeroBox(int numeroBox){
-        this.numeroBox=numeroBox;
-    }
-    public int getNumeroBox(){
-        return numeroBox;
-    }
-    Veicolo []boxes=new Veicolo[numeroBox];
+    Veicolo []boxes=new Veicolo[500];
     public String parcheggiaVeicolo(Veicolo veicoloAgg){
         for(int i=0;i<boxes.length;i++){
             if(boxes[i]==null){
@@ -18,5 +8,13 @@ public class Garage {
             }
         }
         return "VEICOLO AGGIUNTO CON SUCCESSO";
+    }
+    public void visualizzaTutti(){
+        for(int i=0;i<boxes.length;i++){
+            if(boxes[i]!=null){
+                System.out.println(boxes[i].toString());
+                System.out.println(" ");
+            }
+        }
     }
 }

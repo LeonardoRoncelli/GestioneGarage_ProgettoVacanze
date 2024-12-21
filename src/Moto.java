@@ -35,7 +35,12 @@ public class Moto extends Veicolo{
         this.capienzaSerbatoio = capienzaSerbatoio;
     }
     public String toString(){
-        return "Cilindrata della moto: "+cilindrata+"\n"+
+        return "Targa della moto: "+getTarga()+"\n"+
+                "Marca della moto: "+getMarca()+"\n"+
+                "Modello della moto: "+getModello()+"\n"+
+                "Peso della moto: "+getPeso()+"\n"+
+                "Anno immatricolazione della moto: "+getAnnoImmatricolazione()+"\n"+
+                "Cilindrata della moto: "+cilindrata+"\n"+
                 "Tipologia della moto: "+tipologia+"\n"+
                 "Numero di tempi della moto: "+tipologia+"\n"+
                 "Capienza del serbatoio della moto: "+capienzaSerbatoio;

@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class TestGarage {
     public static void main(String[]args){
         Scanner input=new Scanner(System.in);
-        Garage garage=new Garage(500);
+        Garage garage=new Garage();
         int scelta;
         do{
             System.out.println("1 - Parcheggia veicolo\n"+
@@ -128,6 +128,13 @@ public class TestGarage {
                             default:System.out.println("TIPOLOGIA DEL VEICOLO INSERITA NON VALIDA!");
                         }
                     }while (!tipologia.equalsIgnoreCase("auto")&&!tipologia.equalsIgnoreCase("moto")&&!tipologia.equalsIgnoreCase("furgone"));
+                    break;
+                }
+                case 8:{
+                    System.out.println("Ecco la lista di tutti i veicoli parhceggiati: ");
+                    System.out.println(" ");
+                    garage.visualizzaTutti();
+                    break;
                 }
             }
         }while (scelta!=0);
