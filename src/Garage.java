@@ -10,11 +10,18 @@ public class Garage {
         return "VEICOLO AGGIUNTO CON SUCCESSO";
     }
     public void visualizzaTutti(){
+        int contaNull=0;
         for(int i=0;i<boxes.length;i++){
             if(boxes[i]!=null){
                 System.out.println(boxes[i].toString());
                 System.out.println(" ");
+            }else {
+                contaNull++;
             }
+        }
+        if(contaNull==boxes.length){
+            System.out.println("NON CI SONO VEICOLI ALL'INTERNO DEL PARCHEGGIO!");
+            System.out.println(" ");
         }
     }
     public int numBoxOccupati(){
