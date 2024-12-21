@@ -17,4 +17,13 @@ public class Garage {
             }
         }
     }
+    public int numBoxOccupati(){
+        int contaOccupati=0;
+        for(int i=0;i<boxes.length;i++){
+            if(boxes[i]!=null){
+                contaOccupati++;
+            }
+        }
+        return contaOccupati;
+    }
 }

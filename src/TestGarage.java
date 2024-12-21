@@ -136,6 +136,12 @@ public class TestGarage {
                     garage.visualizzaTutti();
                     break;
                 }
+                case 4:{
+                    System.out.print("Numero di box occupati: ");
+                    System.out.println(garage.numBoxOccupati());
+                    System.out.println(" ");
+                    break;
+                }
             }
         }while (scelta!=0);
     }
