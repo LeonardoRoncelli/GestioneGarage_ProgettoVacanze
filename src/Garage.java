@@ -35,4 +35,14 @@ public class Garage {
         }
         return contaLiberi;
     }
+    public boolean ricercaConTarga(String targa){
+        boolean isPresente=false;
+        for(int i=0;i<boxes.length;i++){
+            if(boxes[i]!=null&&boxes[i].getTarga().equalsIgnoreCase(targa)){
+                isPresente=true;
+                break;
+            }
+        }
+        return isPresente;
+    }
 }

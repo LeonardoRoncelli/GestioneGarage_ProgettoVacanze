@@ -148,6 +148,13 @@ public class TestGarage {
                     System.out.println(" ");
                     break;
                 }
+                case 6:{
+                    String targa;
+                    System.out.print("Inserisci la targa del veicolo da ricercare: ");
+                    targa= input.next();
+                    System.out.println("Presenza veicolo: "+garage.ricercaConTarga(targa));
+                    System.out.println(" ");
+                }
             }
         }while (scelta!=0);
     }
