@@ -64,4 +64,11 @@ public class Garage {
             System.out.println("BOX INESISTENTE!");
         }
     }
+    public boolean verificaStatoBox(int numBox){
+        boolean isOccupato=true;
+        if(boxes[numBox]==null){
+            isOccupato=false;
+        }
+        return isOccupato;
+    }
 }
