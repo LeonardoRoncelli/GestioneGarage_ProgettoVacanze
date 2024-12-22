@@ -5,7 +5,8 @@ public class TestGarage {
         Garage garage=new Garage();
         int scelta;
         do{
-            System.out.println("1 - Parcheggia veicolo (verrà percheggiato nel primo box libero)\n"+
+            System.out.println("Benvenuto, questo garage ha in totale 500 posti validi per auto, moto e furgoni. I box sono numerati da 0 a 499.\n"+
+                    "1 - Parcheggia veicolo (verrà percheggiato nel primo box libero)\n"+
                     "2 - Libera box\n"+
                     "3 - Verifica stato di un box\n"+
                     "4 - Numero di box occupati\n"+
@@ -300,6 +301,10 @@ public class TestGarage {
                     }while (!tipologia.equalsIgnoreCase("auto")&&!tipologia.equalsIgnoreCase("moto")&&!tipologia.equalsIgnoreCase("furgone"));
                     break;
                 }
+                default:
+                    System.out.println(" ");
+                    System.out.println("SCELTA INSERITA NON VALIDA!");
+                    System.out.println(" ");
             }
         }while (scelta!=0);
     }
