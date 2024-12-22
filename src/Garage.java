@@ -53,7 +53,7 @@ public class Garage {
         return isPresente;
     }
     public void liberaBox(int numBox){
-        if(numBox>=0&&numBox<=500) {
+        if(numBox>=0&&numBox<500) {
             if (boxes[numBox] == null) {
                 System.out.println("BOX GIÁ LIBERO!");
             }else {
@@ -72,9 +72,9 @@ public class Garage {
         return isOccupato;
     }
     public void parcheggiaBoxSpecifico (int numBox,Veicolo veicolo){
-        if(numBox>=0&&numBox<=500){
+        if(numBox>=0&&numBox<500){
             if(boxes[numBox]!=null){
-                System.out.println("BOX GIÁ OCCUPATO");
+                System.out.println("BOX GIÁ OCCUPATO!");
             }else {
                 boxes[numBox]=veicolo;
                 System.out.println("VEICOLO PARCHEGGIATO CON SUCCESSO!");
