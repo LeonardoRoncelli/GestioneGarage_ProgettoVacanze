@@ -131,18 +131,22 @@ public class TestGarage {
                     break;
                 }
                 case 8:{
+                    System.out.println(" ");
                     System.out.println("Ecco la lista di tutti i veicoli parhceggiati: ");
                     System.out.println(" ");
                     garage.visualizzaTutti();
+                    System.out.println(" ");
                     break;
                 }
                 case 4:{
+                    System.out.println(" ");
                     System.out.print("Numero di box occupati: ");
                     System.out.println(garage.numBoxOccupati());
                     System.out.println(" ");
                     break;
                 }
                 case 5:{
+                    System.out.println(" ");
                     System.out.print("Numero di box liberi: ");
                     System.out.println(garage.numBoxLiberi());
                     System.out.println(" ");
@@ -150,6 +154,7 @@ public class TestGarage {
                 }
                 case 6:{
                     String targa;
+                    System.out.println(" ");
                     System.out.print("Inserisci la targa del veicolo da ricercare: ");
                     targa= input.next();
                     System.out.println("Presenza veicolo: "+garage.ricercaConTarga(targa));
@@ -158,6 +163,7 @@ public class TestGarage {
                 }
                 case 2:{
                     int numBox;
+                    System.out.println(" ");
                     System.out.print("Inserisci il numero del box da liberare: ");
                     numBox= input.nextInt();
                     garage.liberaBox(numBox);
@@ -166,9 +172,11 @@ public class TestGarage {
                 }
                 case 3:{
                     int numBox;
+                    System.out.println(" ");
                     System.out.print("Inserisci il numero del box da controllare: ");
                     numBox= input.nextInt();
                     System.out.println("Box occupato: "+garage.verificaStatoBox(numBox));
+                    System.out.println(" ");
                 }
             }
         }while (scelta!=0);
