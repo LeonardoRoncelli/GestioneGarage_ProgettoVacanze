@@ -83,4 +83,16 @@ public class Garage {
             System.out.println("BOX INESISTENTE!");
         }
     }
+    public void modificaVeicolo(int numBox,Veicolo veicolo){
+        if (numBox>=0&&numBox<500){
+            if(boxes[numBox]==null){
+                System.out.println("BOX LIBERO, IMPOSSIBILE MODIFICARE I DATI!");
+            }else{
+                boxes[numBox]=veicolo;
+                System.out.println("DATI MODIFICATI CON SUCCESSO!");
+            }
+        }else {
+            System.out.println("BOX INESISTENTE!");
+        }
+    }
 }
