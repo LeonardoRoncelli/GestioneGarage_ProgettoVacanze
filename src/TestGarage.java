@@ -17,7 +17,14 @@ public class TestGarage {
                     "9 - Parcheggia veicolo in un box specifico\n"+
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
-            scelta= input.nextInt();
+            try {
+                scelta = input.nextInt();
+                input.nextLine();
+            } catch (Exception e) {
+                System.out.println("Errore: Inserisci un numero valido!");
+                input.nextLine();
+                scelta = -1;
+            }
             switch (scelta){
                 case 1:{
                     String tipologia;
