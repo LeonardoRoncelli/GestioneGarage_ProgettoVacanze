@@ -71,4 +71,16 @@ public class Garage {
         }
         return isOccupato;
     }
+    public void parcheggiaBoxSpecifico (int numBox,Veicolo veicolo){
+        if(numBox>=0&&numBox<=500){
+            if(boxes[numBox]!=null){
+                System.out.println("BOX GIÁ OCCUPATO");
+            }else {
+                boxes[numBox]=veicolo;
+                System.out.println("VEICOLO PARCHEGGIATO CON SUCCESSO!");
+            }
+        }else {
+            System.out.println("BOX INESISTENTE!");
+        }
+    }
 }

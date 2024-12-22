@@ -43,7 +43,6 @@ public class Auto extends Veicolo{
                 "Numero di porte del veicolo: "+numPorte+"\n"+
                 "Tipo di alimentazione del veicolo: "+alimentazione+"\n"+
                 "Cilindrata del veicolo: "+cilindrata+"\n"+
-                "Tipologia del veicolo (es.: suv, station wagon...): "+getTipologia()+"\n"+
-                "Prezzo del box";
+                "Tipologia del veicolo (es.: suv, station wagon...): "+getTipologia();
     }
 }
