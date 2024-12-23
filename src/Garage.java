@@ -94,4 +94,14 @@ public class Garage {
             System.out.println("BOX INESISTENTE!");
         }
     }
+    public double calcolaPrezzo(double tempo){
+        double prezzo=0;
+        if(tempo>0){
+            prezzo=1.50*tempo;
+            Box box=new Box(prezzo);
+        }else {
+            System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+        }
+        return prezzo;
+    }
 }

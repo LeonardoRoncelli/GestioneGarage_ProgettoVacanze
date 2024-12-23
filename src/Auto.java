@@ -1,7 +1,7 @@
 public class Auto extends Veicolo{
     private String tipologia;
-    public Auto(String targa,String marca,String modello,String tipologia){
-        super(targa,marca,modello);
+    public Auto(String targa,String marca,String modello,double prezzoBox,String tipologia){
+        super(targa,marca,modello,prezzoBox);
         this.tipologia=tipologia;
     }
     public String getTipologia() {
@@ -14,6 +14,7 @@ public class Auto extends Veicolo{
         return "Targa dell'auto: "+getTarga()+"\n"+
                 "Marca dell'auto: "+getMarca()+"\n"+
                 "Modello dell'auto: "+getModello()+"\n"+
-                "Tipologia del veicolo (es.: suv, station wagon...): "+getTipologia();
+                "Tipologia del veicolo (es.: suv, station wagon...): "+getTipologia()+"\n"+
+                "Prezzo: "+getPrezzoBox();
     }
 }

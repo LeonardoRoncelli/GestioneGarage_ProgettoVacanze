@@ -1,8 +1,8 @@
 public class Furgone extends Veicolo{
     private int numeroAssi;
     private double altezzaMax;
-    public Furgone(String targa,String marca,String modello,int numeroAssi,double altezzaMax){
-        super(targa, marca, modello);
+    public Furgone(String targa,String marca,String modello,double prezzoBox,int numeroAssi,double altezzaMax){
+        super(targa, marca, modello,prezzoBox);
         this.numeroAssi=numeroAssi;
         this.altezzaMax=altezzaMax;
     }
@@ -23,6 +23,7 @@ public class Furgone extends Veicolo{
                 "Marca del furgone: "+getMarca()+"\n"+
                 "Modello del furgone: "+getModello()+"\n"+
                 "Numero di assi del furgone: "+numeroAssi+"\n"+
-                "Altezza massima del furgone: "+altezzaMax;
+                "Altezza massima del furgone: "+altezzaMax+"\n"+
+                "Prezzo: "+getPrezzoBox();
     }
 }

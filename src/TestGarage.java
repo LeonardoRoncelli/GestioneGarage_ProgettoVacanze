@@ -12,10 +12,9 @@ public class TestGarage {
                     "4 - Numero di box occupati\n"+
                     "5 - Numero di box liberi\n"+
                     "6 - Ricerca di un veicolo attraverso la targa\n"+
-                    "7 - Calcolo del prezzo in base al tempo di permanenza del veicolo all'interno del garage\n"+
-                    "8 - Visualizzazione di tutti i veicoli parcheggiati\n"+
-                    "9 - Parcheggia veicolo in un box specifico\n"+
-                    "10 - Modifica i dati di un veicolo\n"+
+                    "7 - Visualizzazione di tutti i veicoli parcheggiati\n"+
+                    "8 - Parcheggia veicolo in un box specifico\n"+
+                    "9 - Modifica i dati di un veicolo\n"+
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
             try {
@@ -38,6 +37,7 @@ public class TestGarage {
                                 String marca;
                                 String modello;
                                 String tipologiaAgg;
+                                double tempo;
                                 System.out.print("Inserisci la targa dell'auto da parcheggiare: ");
                                 targa= input.next();
                                 System.out.print("Inserisci la marca dell'auto da parcheggiare: ");
@@ -46,7 +46,14 @@ public class TestGarage {
                                 modello= input.next();
                                 System.out.print("Inserisci la tipologia dell'auto da aggiungere (es.: suv, station wagon...): ");
                                 tipologiaAgg= input.next();
-                                Auto autoAgg=new Auto(targa,marca,modello,tipologiaAgg);
+                                do {
+                                    System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                    tempo = input.nextDouble();
+                                    if (tempo<=0){
+                                        System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                    }
+                                }while (tempo<=0);
+                                Auto autoAgg=new Auto(targa,marca,modello, garage.calcolaPrezzo(tempo), tipologiaAgg);
                                 System.out.println(" ");
                                 System.out.println(garage.parcheggiaVeicolo(autoAgg));
                                 System.out.println(" ");
@@ -58,6 +65,7 @@ public class TestGarage {
                                 String modello;
                                 int cilindrata;
                                 String tipologiaAgg;
+                                double tempo;
                                 System.out.print("Inserisci la targa della moto da parcheggiare: ");
                                 targa= input.next();
                                 System.out.print("Inserisci la marca della moto da parcheggiare: ");
@@ -68,7 +76,14 @@ public class TestGarage {
                                 cilindrata=input.nextInt();
                                 System.out.print("Inserisci la tipologia della moto da aggiungere (es.: sportiva, cross...): ");
                                 tipologiaAgg= input.next();
-                                Moto motoAgg=new Moto(targa,marca,modello,cilindrata,tipologiaAgg);
+                                do {
+                                    System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                    tempo = input.nextDouble();
+                                    if (tempo<=0){
+                                        System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                    }
+                                }while (tempo<=0);
+                                Moto motoAgg=new Moto(targa,marca,modello, garage.calcolaPrezzo(tempo), cilindrata,tipologiaAgg);
                                 System.out.println(" ");
                                 System.out.println(garage.parcheggiaVeicolo(motoAgg));
                                 System.out.println(" ");
@@ -80,6 +95,7 @@ public class TestGarage {
                                 String modello;
                                 int numeroAssi;
                                 double altezzaMax;
+                                double tempo;
                                 System.out.print("Inserisci la targa del furgone da parcheggiare: ");
                                 targa= input.next();
                                 System.out.print("Inserisci la marca del furgone da parcheggiare: ");
@@ -90,7 +106,14 @@ public class TestGarage {
                                 numeroAssi= input.nextInt();
                                 System.out.print("Inserisci l'altezza massima del furgone da parcheggiare: ");
                                 altezzaMax= input.nextDouble();
-                                Furgone furgoneAgg=new Furgone(targa,marca,modello,numeroAssi,altezzaMax);
+                                do {
+                                    System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                    tempo = input.nextDouble();
+                                    if (tempo<=0){
+                                        System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                    }
+                                }while (tempo<=0);
+                                Furgone furgoneAgg=new Furgone(targa,marca,modello, garage.calcolaPrezzo(tempo), numeroAssi,altezzaMax);
                                 System.out.println(" ");
                                 System.out.println(garage.parcheggiaVeicolo(furgoneAgg));
                                 System.out.println(" ");
@@ -101,7 +124,7 @@ public class TestGarage {
                     }while (!tipologia.equalsIgnoreCase("auto")&&!tipologia.equalsIgnoreCase("moto")&&!tipologia.equalsIgnoreCase("furgone"));
                     break;
                 }
-                case 8:{
+                case 7:{
                     System.out.println(" ");
                     System.out.println("Ecco la lista di tutti i veicoli parhceggiati: ");
                     System.out.println(" ");
@@ -150,7 +173,7 @@ public class TestGarage {
                     System.out.println(" ");
                     break;
                 }
-                case 9:{
+                case 8:{
                     int numBox;
                     String tipologia;
                     do {
@@ -162,6 +185,7 @@ public class TestGarage {
                                 String marca;
                                 String modello;
                                 String tipologiaAgg;
+                                double tempo;
                                 System.out.print("Inserisci la targa dell'auto da parcheggiare: ");
                                 targa= input.next();
                                 System.out.print("Inserisci la marca dell'auto da parcheggiare: ");
@@ -172,7 +196,14 @@ public class TestGarage {
                                 tipologiaAgg= input.next();
                                 System.out.print("Inserisci il numero del box in cui vuoi parcheggiare il veicolo: ");
                                 numBox=input.nextInt();
-                                Auto autoAgg=new Auto(targa,marca,modello,tipologiaAgg);
+                                do {
+                                    System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                    tempo = input.nextDouble();
+                                    if (tempo<=0){
+                                        System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                    }
+                                }while (tempo<=0);
+                                Auto autoAgg=new Auto(targa,marca,modello, garage.calcolaPrezzo(tempo), tipologiaAgg);
                                 System.out.println(" ");
                                 garage.parcheggiaBoxSpecifico(numBox,autoAgg);
                                 System.out.println(" ");
@@ -184,6 +215,7 @@ public class TestGarage {
                                 String modello;
                                 int cilindrata;
                                 String tipologiaAgg;
+                                double tempo;
                                 System.out.print("Inserisci la targa della moto da parcheggiare: ");
                                 targa= input.next();
                                 System.out.print("Inserisci la marca della moto da parcheggiare: ");
@@ -196,7 +228,14 @@ public class TestGarage {
                                 tipologiaAgg= input.next();
                                 System.out.print("Inserisci il numero del box in cui vuoi parcheggiare il veicolo: ");
                                 numBox=input.nextInt();
-                                Moto motoAgg=new Moto(targa,marca,modello,cilindrata,tipologiaAgg);
+                                do {
+                                    System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                    tempo = input.nextDouble();
+                                    if (tempo<=0){
+                                        System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                    }
+                                }while (tempo<=0);
+                                Moto motoAgg=new Moto(targa,marca,modello, garage.calcolaPrezzo(tempo), cilindrata,tipologiaAgg);
                                 System.out.println(" ");
                                 garage.parcheggiaBoxSpecifico(numBox,motoAgg);
                                 System.out.println(" ");
@@ -208,6 +247,7 @@ public class TestGarage {
                                 String modello;
                                 int numeroAssi;
                                 double altezzaMax;
+                                double tempo;
                                 System.out.print("Inserisci la targa del furgone da parcheggiare: ");
                                 targa= input.next();
                                 System.out.print("Inserisci la marca del furgone da parcheggiare: ");
@@ -220,7 +260,14 @@ public class TestGarage {
                                 altezzaMax= input.nextDouble();
                                 System.out.print("Inserisci il numero del box in cui vuoi parcheggiare il veicolo: ");
                                 numBox= input.nextInt();
-                                Furgone furgoneAgg=new Furgone(targa,marca,modello,numeroAssi,altezzaMax);
+                                do {
+                                    System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                    tempo = input.nextDouble();
+                                    if (tempo<=0){
+                                        System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                    }
+                                }while (tempo<=0);
+                                Furgone furgoneAgg=new Furgone(targa,marca,modello, garage.calcolaPrezzo(tempo), numeroAssi,altezzaMax);
                                 System.out.println(" ");
                                 garage.parcheggiaBoxSpecifico(numBox,furgoneAgg);
                                 System.out.println(" ");
@@ -231,7 +278,7 @@ public class TestGarage {
                     }while (!tipologia.equalsIgnoreCase("auto")&&!tipologia.equalsIgnoreCase("moto")&&!tipologia.equalsIgnoreCase("furgone"));
                     break;
                 }
-                case 10:{
+                case 9:{
                     int numBox;
                     String tipoVeicolo;
                     System.out.println(" ");
@@ -246,6 +293,7 @@ public class TestGarage {
                             String marca;
                             String modello;
                             String tipologiaAgg;
+                            double tempo;
                             System.out.println("Inserisci i nuovi dati");
                             System.out.print("Inserisci la targa dell'auto da parcheggiare: ");
                             targa= input.next();
@@ -255,7 +303,14 @@ public class TestGarage {
                             modello= input.next();
                             System.out.print("Inserisci la tipologia dell'auto da aggiungere (es.: suv, station wagon...): ");
                             tipologiaAgg= input.next();
-                            Auto autoAgg=new Auto(targa,marca,modello,tipologiaAgg);
+                            do {
+                                System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                tempo = input.nextDouble();
+                                if (tempo<=0){
+                                    System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                }
+                            }while (tempo<=0);
+                            Auto autoAgg=new Auto(targa,marca,modello, garage.calcolaPrezzo(tempo), tipologiaAgg);
                             System.out.println(" ");
                             garage.modificaVeicolo(numBox,autoAgg);
                             System.out.println(" ");
@@ -267,6 +322,7 @@ public class TestGarage {
                             String modello;
                             int cilindrata;
                             String tipologiaAgg;
+                            double tempo;
                             System.out.println("Inserisci i nuovi dati");
                             System.out.print("Inserisci la targa della moto da parcheggiare: ");
                             targa= input.next();
@@ -278,7 +334,14 @@ public class TestGarage {
                             cilindrata=input.nextInt();
                             System.out.print("Inserisci la tipologia della moto da aggiungere (es.: sportiva, cross...): ");
                             tipologiaAgg= input.next();
-                            Moto motoAgg=new Moto(targa,marca,modello,cilindrata,tipologiaAgg);
+                            do {
+                                System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                tempo = input.nextDouble();
+                                if (tempo<=0){
+                                    System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                }
+                            }while (tempo<=0);
+                            Moto motoAgg=new Moto(targa,marca,modello,tempo,cilindrata,tipologiaAgg);
                             System.out.println(" ");
                             garage.modificaVeicolo(numBox,motoAgg);
                             System.out.println(" ");
@@ -290,6 +353,7 @@ public class TestGarage {
                             String modello;
                             int numeroAssi;
                             double altezzaMax;
+                            double tempo;
                             System.out.println("Inserisci i nuovi dati");
                             System.out.print("Inserisci la targa del furgone da parcheggiare: ");
                             targa= input.next();
@@ -301,7 +365,14 @@ public class TestGarage {
                             numeroAssi= input.nextInt();
                             System.out.print("Inserisci l'altezza massima del furgone da parcheggiare: '");
                             altezzaMax= input.nextDouble();
-                            Furgone furgoneAgg=new Furgone(targa,marca,modello,numeroAssi,altezzaMax);
+                            do {
+                                System.out.print("Inserisci per quanto tempo il veicolo resterà all'interno del garage (in ore): ");
+                                tempo = input.nextDouble();
+                                if (tempo<=0){
+                                    System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
+                                }
+                            }while (tempo<=0);
+                            Furgone furgoneAgg=new Furgone(targa,marca,modello, garage.calcolaPrezzo(tempo), numeroAssi,altezzaMax);
                             System.out.println(" ");
                             garage.modificaVeicolo(numBox,furgoneAgg);
                             System.out.println(" ");
