@@ -24,6 +24,6 @@ public class Moto extends Veicolo{
                 "Modello della moto: "+getModello()+"\n"+
                 "Cilindrata della moto: "+cilindrata+"\n"+
                 "Tipologia della moto: "+tipologia+"\n"+
-                "Prezzo: "+getPrezzoBox();
+                "Prezzo del box: "+getPrezzoBox()+" €";
     }
 }

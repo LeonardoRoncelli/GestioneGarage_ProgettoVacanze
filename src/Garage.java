@@ -1,13 +1,18 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Garage {
     Veicolo []boxes=new Veicolo[500];
-    public String parcheggiaVeicolo(Veicolo veicoloAgg){
+    public int parcheggiaVeicolo(Veicolo veicoloAgg){
+        int numBox=0;
         for(int i=0;i<boxes.length;i++){
             if(boxes[i]==null){
                 boxes[i]=veicoloAgg;
+                numBox=i;
                 break;
             }
         }
-        return "VEICOLO AGGIUNTO CON SUCCESSO";
+        return numBox;
     }
     public void visualizzaTutti(){
         int contaNull=0;
@@ -96,12 +101,16 @@ public class Garage {
     }
     public double calcolaPrezzo(double tempo){
         double prezzo=0;
+        double prezzoArrotondato=0;
         if(tempo>0){
             prezzo=1.50*tempo;
-            Box box=new Box(prezzo);
+            BigDecimal arrotondamento=new BigDecimal(prezzo);
+            arrotondamento=arrotondamento.setScale(2, RoundingMode.HALF_UP);
+            prezzoArrotondato=arrotondamento.doubleValue();
+            Box box=new Box(prezzoArrotondato);
         }else {
             System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
         }
-        return prezzo;
+        return prezzoArrotondato;
     }
 }
