@@ -1,24 +1,15 @@
 public class Box {
-    private String tipologiaBox;
-    private boolean isOccupato;
-    public void setTipologiaBox(String tipologiaBox){
-        this.tipologiaBox=tipologiaBox;
+    private double prezzo;
+    public void setPrezzo(double prezzo){
+        this.prezzo=prezzo;
     }
-    public String getTipologiaBox(){
-        return tipologiaBox;
+    public double getPrezzo(){
+        return prezzo;
     }
-    public void setIsOccupato(boolean isOccupato){
-        this.isOccupato=isOccupato;
-    }
-    public boolean getIsOccupato(){
-        return isOccupato;
-    }
-    public Box(String tipologiaBox,boolean isOccupato){
-        this.tipologiaBox=tipologiaBox;
-        this.isOccupato=isOccupato;
+    public Box(double prezzo){
+        this.prezzo=prezzo;
     }
     public String toString(){
-        return "Tipologia del box: "+tipologiaBox+"\n"+
-                "Occupato: "+isOccupato;
+        return "Prezzo del box: "+prezzo;
     }
 }
