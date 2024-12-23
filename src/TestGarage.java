@@ -12,7 +12,7 @@ public class TestGarage {
                     "4 - Numero di box occupati\n"+
                     "5 - Numero di box liberi\n"+
                     "6 - Ricerca di un veicolo attraverso la targa\n"+
-                    "7 - Calcolo del prezzo in base al veicolo\n"+
+                    "7 - Calcolo del prezzo in base al tempo di permanenza del veicolo all'interno del garage\n"+
                     "8 - Visualizzazione di tutti i veicoli parcheggiati\n"+
                     "9 - Parcheggia veicolo in un box specifico\n"+
                     "10 - Modifica i dati di un veicolo\n"+
@@ -46,7 +46,7 @@ public class TestGarage {
                                 modello= input.next();
                                 System.out.print("Inserisci la tipologia dell'auto da aggiungere (es.: suv, station wagon...): ");
                                 tipologiaAgg= input.next();
-                                Auto autoAgg=new Auto(targa,marca,modello,20,tipologiaAgg);
+                                Auto autoAgg=new Auto(targa,marca,modello,tipologiaAgg);
                                 System.out.println(" ");
                                 System.out.println(garage.parcheggiaVeicolo(autoAgg));
                                 System.out.println(" ");
@@ -68,7 +68,7 @@ public class TestGarage {
                                 cilindrata=input.nextInt();
                                 System.out.print("Inserisci la tipologia della moto da aggiungere (es.: sportiva, cross...): ");
                                 tipologiaAgg= input.next();
-                                Moto motoAgg=new Moto(targa,marca,modello,10,cilindrata,tipologiaAgg);
+                                Moto motoAgg=new Moto(targa,marca,modello,cilindrata,tipologiaAgg);
                                 System.out.println(" ");
                                 System.out.println(garage.parcheggiaVeicolo(motoAgg));
                                 System.out.println(" ");
@@ -90,7 +90,7 @@ public class TestGarage {
                                 numeroAssi= input.nextInt();
                                 System.out.print("Inserisci l'altezza massima del furgone da parcheggiare: ");
                                 altezzaMax= input.nextDouble();
-                                Furgone furgoneAgg=new Furgone(targa,marca,modello,40,numeroAssi,altezzaMax);
+                                Furgone furgoneAgg=new Furgone(targa,marca,modello,numeroAssi,altezzaMax);
                                 System.out.println(" ");
                                 System.out.println(garage.parcheggiaVeicolo(furgoneAgg));
                                 System.out.println(" ");
@@ -172,7 +172,7 @@ public class TestGarage {
                                 tipologiaAgg= input.next();
                                 System.out.print("Inserisci il numero del box in cui vuoi parcheggiare il veicolo: ");
                                 numBox=input.nextInt();
-                                Auto autoAgg=new Auto(targa,marca,modello,20,tipologiaAgg);
+                                Auto autoAgg=new Auto(targa,marca,modello,tipologiaAgg);
                                 System.out.println(" ");
                                 garage.parcheggiaBoxSpecifico(numBox,autoAgg);
                                 System.out.println(" ");
@@ -196,7 +196,7 @@ public class TestGarage {
                                 tipologiaAgg= input.next();
                                 System.out.print("Inserisci il numero del box in cui vuoi parcheggiare il veicolo: ");
                                 numBox=input.nextInt();
-                                Moto motoAgg=new Moto(targa,marca,modello,10,cilindrata,tipologiaAgg);
+                                Moto motoAgg=new Moto(targa,marca,modello,cilindrata,tipologiaAgg);
                                 System.out.println(" ");
                                 garage.parcheggiaBoxSpecifico(numBox,motoAgg);
                                 System.out.println(" ");
@@ -220,7 +220,7 @@ public class TestGarage {
                                 altezzaMax= input.nextDouble();
                                 System.out.print("Inserisci il numero del box in cui vuoi parcheggiare il veicolo: ");
                                 numBox= input.nextInt();
-                                Furgone furgoneAgg=new Furgone(targa,marca,modello,40,numeroAssi,altezzaMax);
+                                Furgone furgoneAgg=new Furgone(targa,marca,modello,numeroAssi,altezzaMax);
                                 System.out.println(" ");
                                 garage.parcheggiaBoxSpecifico(numBox,furgoneAgg);
                                 System.out.println(" ");
@@ -255,7 +255,7 @@ public class TestGarage {
                             modello= input.next();
                             System.out.print("Inserisci la tipologia dell'auto da aggiungere (es.: suv, station wagon...): ");
                             tipologiaAgg= input.next();
-                            Auto autoAgg=new Auto(targa,marca,modello,20,tipologiaAgg);
+                            Auto autoAgg=new Auto(targa,marca,modello,tipologiaAgg);
                             System.out.println(" ");
                             garage.modificaVeicolo(numBox,autoAgg);
                             System.out.println(" ");
@@ -278,7 +278,7 @@ public class TestGarage {
                             cilindrata=input.nextInt();
                             System.out.print("Inserisci la tipologia della moto da aggiungere (es.: sportiva, cross...): ");
                             tipologiaAgg= input.next();
-                            Moto motoAgg=new Moto(targa,marca,modello,10,cilindrata,tipologiaAgg);
+                            Moto motoAgg=new Moto(targa,marca,modello,cilindrata,tipologiaAgg);
                             System.out.println(" ");
                             garage.modificaVeicolo(numBox,motoAgg);
                             System.out.println(" ");
@@ -301,7 +301,7 @@ public class TestGarage {
                             numeroAssi= input.nextInt();
                             System.out.print("Inserisci l'altezza massima del furgone da parcheggiare: '");
                             altezzaMax= input.nextDouble();
-                            Furgone furgoneAgg=new Furgone(targa,marca,modello,40,numeroAssi,altezzaMax);
+                            Furgone furgoneAgg=new Furgone(targa,marca,modello,numeroAssi,altezzaMax);
                             System.out.println(" ");
                             garage.modificaVeicolo(numBox,furgoneAgg);
                             System.out.println(" ");

@@ -2,13 +2,6 @@ public class Veicolo {
     private String targa;
     private String marca;
     private String modello;
-    private double prezzoBox;
-    public void setPrezzoBox(double prezzoBox){
-        this.prezzoBox=prezzoBox;
-    }
-    public double getPrezzoBox(){
-        return prezzoBox;
-    }
     public String getTarga() {
         return targa;
     }
@@ -27,16 +20,14 @@ public class Veicolo {
     public void setModello(String modello) {
         this.modello = modello;
     }
-    public Veicolo(String targa,String marca,String modello,double prezzoBox){
+    public Veicolo(String targa,String marca,String modello){
         this.targa=targa;
         this.marca=marca;
         this.modello=modello;
-        this.prezzoBox=prezzoBox;
     }
     public String toString(){
         return "Targa del veicolo: "+targa+"\n"+
                 "Marca del veicolo: "+marca+"\n"+
-                "Modello del veicolo: "+modello+"\n"+
-                "Prezzo del box";
+                "Modello del veicolo: "+modello;
     }
 }

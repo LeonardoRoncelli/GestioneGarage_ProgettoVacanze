@@ -1,8 +1,8 @@
 public class Furgone extends Veicolo{
     private int numeroAssi;
     private double altezzaMax;
-    public Furgone(String targa,String marca,String modello,double prezzoBox,int numeroAssi,double altezzaMax){
-        super(targa, marca, modello,prezzoBox);
+    public Furgone(String targa,String marca,String modello,int numeroAssi,double altezzaMax){
+        super(targa, marca, modello);
         this.numeroAssi=numeroAssi;
         this.altezzaMax=altezzaMax;
     }

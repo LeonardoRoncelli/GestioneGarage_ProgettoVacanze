@@ -1,7 +1,7 @@
 public class Auto extends Veicolo{
     private String tipologia;
-    public Auto(String targa,String marca,String modello,double prezzoBox,String tipologia){
-        super(targa,marca,modello,prezzoBox);
+    public Auto(String targa,String marca,String modello,String tipologia){
+        super(targa,marca,modello);
         this.tipologia=tipologia;
     }
     public String getTipologia() {
