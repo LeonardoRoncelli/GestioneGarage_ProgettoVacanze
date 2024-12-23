@@ -21,7 +21,6 @@ public class Garage {
         }
         if(contaNull==boxes.length){
             System.out.println("NON CI SONO VEICOLI ALL'INTERNO DEL PARCHEGGIO!");
-            System.out.println(" ");
         }
     }
     public int numBoxOccupati(){
