@@ -384,6 +384,8 @@ public class TestGarage {
                     break;
                 }
                 case 0:{
+                    System.out.println(" ");
+                    System.out.println("Arrivederci!");
                     break;
                 }
                 default:
