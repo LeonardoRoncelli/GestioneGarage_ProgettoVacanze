@@ -46,7 +46,7 @@ public class Garage {
         }
         return contaLiberi;
     }
-    public boolean ricercaConTarga(String targa){
+    public void ricercaConTarga(String targa){
         boolean isPresente=false;
         for(int i=0;i<boxes.length;i++){
             if(boxes[i]!=null&&boxes[i].getTarga().equalsIgnoreCase(targa)){
@@ -54,7 +54,11 @@ public class Garage {
                 break;
             }
         }
-        return isPresente;
+        if(!isPresente){
+            System.out.println("Veicolo con targa inserita NON PRESENTE");
+        }else{
+            System.out.println("Veicolo con targa inserita PRESENTE");
+        }
     }
     public void liberaBox(int numBox){
         if(numBox>=0&&numBox<500) {
@@ -74,7 +78,11 @@ public class Garage {
             if (boxes[numBox] == null) {
                 isOccupato = false;
             }
-            System.out.println("Box occupato: "+isOccupato);
+            if(!isOccupato){
+                System.out.println("Box NON OCCUPATO");
+            }else {
+                System.out.println("Box OCCUPATO");
+            }
         }else {
             System.out.println("BOX INESISTENTE!");
         }
