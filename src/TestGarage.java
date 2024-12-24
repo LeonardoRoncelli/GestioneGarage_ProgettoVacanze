@@ -15,6 +15,7 @@ public class TestGarage {
                     "7 - Visualizzazione di tutti i veicoli parcheggiati\n"+
                     "8 - Parcheggia veicolo in un box specifico\n"+
                     "9 - Modifica i dati di un veicolo\n"+
+                    "10 - Visualizza il ricavo totale\n"+
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
             try {
@@ -386,6 +387,12 @@ public class TestGarage {
                 case 0:{
                     System.out.println(" ");
                     System.out.println("Arrivederci!");
+                    break;
+                }
+                case 10:{
+                    System.out.println(" ");
+                    System.out.println("Ricavo totale aggiornato: "+garage.ricavoTotale()+" €");
+                    System.out.println(" ");
                     break;
                 }
                 default:

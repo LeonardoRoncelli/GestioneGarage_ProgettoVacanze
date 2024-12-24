@@ -125,4 +125,13 @@ public class Garage {
         }
         return prezzoArrotondato;
     }
+    public double ricavoTotale(){
+        double ricavo=0;
+        for(int i=0;i<boxes.length;i++){
+            if(boxes[i]!=null){
+                ricavo+=boxes[i].getPrezzoBox();
+            }
+        }
+        return ricavo;
+    }
 }
