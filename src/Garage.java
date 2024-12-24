@@ -68,12 +68,16 @@ public class Garage {
             System.out.println("BOX INESISTENTE!");
         }
     }
-    public boolean verificaStatoBox(int numBox){
+    public void verificaStatoBox(int numBox){
         boolean isOccupato=true;
-        if(boxes[numBox]==null){
-            isOccupato=false;
+        if(numBox>=0&&numBox<500) {
+            if (boxes[numBox] == null) {
+                isOccupato = false;
+            }
+            System.out.println("Box occupato: "+isOccupato);
+        }else {
+            System.out.println("BOX INESISTENTE!");
         }
-        return isOccupato;
     }
     public void parcheggiaBoxSpecifico (int numBox,Veicolo veicolo){
         if(numBox>=0&&numBox<500){

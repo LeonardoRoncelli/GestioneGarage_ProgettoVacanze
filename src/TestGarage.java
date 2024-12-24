@@ -169,7 +169,7 @@ public class TestGarage {
                     System.out.println(" ");
                     System.out.print("Inserisci il numero del box da controllare: ");
                     numBox= input.nextInt();
-                    System.out.println("Box occupato: "+garage.verificaStatoBox(numBox));
+                    garage.verificaStatoBox(numBox);
                     System.out.println(" ");
                     break;
                 }
