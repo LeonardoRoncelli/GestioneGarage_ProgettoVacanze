@@ -18,6 +18,7 @@ public class Garage {
         int contaNull=0;
         for(int i=0;i<boxes.length;i++){
             if(boxes[i]!=null){
+                System.out.println("BOX "+i);
                 System.out.println(boxes[i].toString());
                 System.out.println(" ");
             }else {
