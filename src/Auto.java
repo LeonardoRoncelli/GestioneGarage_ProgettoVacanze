@@ -14,7 +14,7 @@ public class Auto extends Veicolo{
         return "Targa dell'auto: "+getTarga()+"\n"+
                 "Marca dell'auto: "+getMarca()+"\n"+
                 "Modello dell'auto: "+getModello()+"\n"+
-                "Tipologia del veicolo (es.: suv, station wagon...): "+getTipologia()+"\n"+
+                "Tipologia dell'auto (es.: suv, station wagon...): "+getTipologia()+"\n"+
                 "Prezzo del box: "+getPrezzoBox()+" €";
     }
 }

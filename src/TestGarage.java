@@ -12,7 +12,7 @@ public class TestGarage {
                     "4 - Numero di box occupati\n"+
                     "5 - Numero di box liberi\n"+
                     "6 - Ricerca di un veicolo attraverso la targa\n"+
-                    "7 - Visualizzazione di tutti i veicoli parcheggiati\n"+
+                    "7 - Visualizza tutti i veicoli parcheggiati\n"+
                     "8 - Parcheggia veicolo in un box specifico\n"+
                     "9 - Modifica i dati di un veicolo\n"+
                     "10 - Visualizza il ricavo totale\n"+
