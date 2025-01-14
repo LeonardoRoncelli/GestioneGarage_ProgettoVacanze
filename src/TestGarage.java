@@ -164,7 +164,7 @@ public class TestGarage {
                     System.out.println(" ");
                     System.out.print("Inserisci il numero del box da liberare: ");
                     numBox= input.nextInt();
-                    garage.liberaBox(numBox);
+                    System.out.println(garage.liberaBox(numBox));
                     System.out.println(" ");
                     break;
                 }

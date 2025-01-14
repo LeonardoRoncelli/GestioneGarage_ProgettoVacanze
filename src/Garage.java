@@ -66,16 +66,16 @@ public class Garage {
             return "Veicolo con targa inserita PRESENTE";
         }
     }
-    public void liberaBox(int numBox){
+    public String liberaBox(int numBox){
         if(numBox>=0&&numBox<500) {
             if (boxes[numBox] == null) {
-                System.out.println("BOX GIÁ LIBERO!");
+                return"BOX GIÁ LIBERO!";
             }else {
                 boxes[numBox] = null;
-                System.out.println("BOX LIBERATO CON SUCCESSO");
+                return"BOX LIBERATO CON SUCCESSO";
             }
         }else{
-            System.out.println("BOX INESISTENTE!");
+            return"BOX INESISTENTE!";
         }
     }
     public void verificaStatoBox(int numBox){
