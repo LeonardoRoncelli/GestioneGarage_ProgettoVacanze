@@ -93,7 +93,7 @@ public class Garage {
             return"BOX INESISTENTE!";
         }
     }
-    public void parcheggiaBoxSpecifico (int numBox,Veicolo veicolo){
+    public String parcheggiaBoxSpecifico (int numBox,Veicolo veicolo){
         boolean pieno=true;
         for(int i=0;i<boxes.length;i++){
             if(boxes[i]==null){
@@ -102,17 +102,17 @@ public class Garage {
             }
         }
         if(pieno){
-            System.out.println("IL GARAGE É COMPLETO! VEICOLO NON PARCHEGGIATO!");
+            return"IL GARAGE É COMPLETO! VEICOLO NON PARCHEGGIATO!";
         }
         if(numBox>=0&&numBox<500){
             if(boxes[numBox]!=null){
-                System.out.println("BOX GIÁ OCCUPATO!");
+                return"BOX GIÁ OCCUPATO!";
             }else {
                 boxes[numBox]=veicolo;
-                System.out.println("VEICOLO PARCHEGGIATO CON SUCCESSO!");
+                return"VEICOLO PARCHEGGIATO CON SUCCESSO!";
             }
         }else {
-            System.out.println("BOX INESISTENTE!");
+            return"BOX INESISTENTE!";
         }
     }
     public void modificaVeicolo(int numBox,Veicolo veicolo){

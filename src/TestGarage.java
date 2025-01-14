@@ -210,7 +210,7 @@ public class TestGarage {
                                 }while (tempo<=0);
                                 Auto autoAgg=new Auto(targa,marca,modello, garage.calcolaPrezzo(tempo), tipologiaAgg);
                                 System.out.println(" ");
-                                garage.parcheggiaBoxSpecifico(numBox,autoAgg);
+                                System.out.println(garage.parcheggiaBoxSpecifico(numBox,autoAgg));
                                 System.out.println(" ");
                                 break;
                             }
@@ -244,7 +244,7 @@ public class TestGarage {
                                 }while (tempo<=0);
                                 Moto motoAgg=new Moto(targa,marca,modello, garage.calcolaPrezzo(tempo), cilindrata,tipologiaAgg);
                                 System.out.println(" ");
-                                garage.parcheggiaBoxSpecifico(numBox,motoAgg);
+                                System.out.println(garage.parcheggiaBoxSpecifico(numBox,motoAgg));
                                 System.out.println(" ");
                                 break;
                             }
@@ -277,7 +277,7 @@ public class TestGarage {
                                 }while (tempo<=0);
                                 Furgone furgoneAgg=new Furgone(targa,marca,modello, garage.calcolaPrezzo(tempo), numeroAssi,altezzaMax);
                                 System.out.println(" ");
-                                garage.parcheggiaBoxSpecifico(numBox,furgoneAgg);
+                                System.out.println(garage.parcheggiaBoxSpecifico(numBox,furgoneAgg));
                                 System.out.println(" ");
                                 break;
                             }
