@@ -78,19 +78,19 @@ public class Garage {
             return"BOX INESISTENTE!";
         }
     }
-    public void verificaStatoBox(int numBox){
+    public String verificaStatoBox(int numBox){
         boolean isOccupato=true;
         if(numBox>=0&&numBox<500) {
             if (boxes[numBox] == null) {
                 isOccupato = false;
             }
             if(!isOccupato){
-                System.out.println("Box NON OCCUPATO");
+                return"Box NON OCCUPATO";
             }else {
-                System.out.println("Box OCCUPATO");
+                return"Box OCCUPATO";
             }
         }else {
-            System.out.println("BOX INESISTENTE!");
+            return"BOX INESISTENTE!";
         }
     }
     public void parcheggiaBoxSpecifico (int numBox,Veicolo veicolo){
