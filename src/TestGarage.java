@@ -134,7 +134,6 @@ public class TestGarage {
                     System.out.println("Ecco la lista di tutti i veicoli parhceggiati: ");
                     System.out.println(" ");
                     garage.visualizzaTutti();
-                    System.out.println(" ");
                     break;
                 }
                 case 4:{
@@ -155,8 +154,8 @@ public class TestGarage {
                     String targa;
                     System.out.println(" ");
                     System.out.print("Inserisci la targa del veicolo da ricercare: ");
-                    targa= input.next();
-                    garage.ricercaConTarga(targa);
+                    targa= input.nextLine();
+                    System.out.println(garage.ricercaConTarga(targa));
                     System.out.println(" ");
                     break;
                 }
