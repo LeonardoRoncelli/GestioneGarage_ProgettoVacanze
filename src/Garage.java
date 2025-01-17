@@ -115,16 +115,16 @@ public class Garage {
             return"BOX INESISTENTE!";
         }
     }
-    public void modificaVeicolo(int numBox,Veicolo veicolo){
+    public String modificaVeicolo(int numBox,Veicolo veicolo){
         if (numBox>=0&&numBox<500){
             if(boxes[numBox]==null){
-                System.out.println("BOX LIBERO, IMPOSSIBILE MODIFICARE I DATI!");
+                return"BOX LIBERO, IMPOSSIBILE MODIFICARE I DATI!";
             }else{
                 boxes[numBox]=veicolo;
-                System.out.println("DATI MODIFICATI CON SUCCESSO!");
+                return"DATI MODIFICATI CON SUCCESSO!";
             }
         }else {
-            System.out.println("BOX INESISTENTE!");
+            return"BOX INESISTENTE!";
         }
     }
     public double calcolaPrezzo(double tempo){
