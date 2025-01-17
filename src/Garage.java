@@ -136,8 +136,6 @@ public class Garage {
             arrotondamento=arrotondamento.setScale(2, RoundingMode.HALF_UP);
             prezzoArrotondato=arrotondamento.doubleValue();
             Box box=new Box(prezzoArrotondato);
-        }else {
-            System.out.println("VALORE DEL TEMPO INSERITO NON VALIDO!");
         }
         return prezzoArrotondato;
     }
