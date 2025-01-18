@@ -14,6 +14,9 @@ public class Garage {
                 break;
             }
         }
+        if(pieno){
+            System.out.println("IL GARAGE É COMPLETO! VEICOLO NON PARCHEGGIATO!");
+        }
         return numBox;
     }
     public void visualizzaTutti(){

@@ -57,11 +57,7 @@ public class TestGarage {
                                 }while (tempo<=0);
                                 Auto autoAgg=new Auto(targa,marca,modello, garage.calcolaPrezzo(tempo), tipologiaAgg);
                                 System.out.println(" ");
-                                if(garage.parcheggiaVeicolo(autoAgg)==-1){
-                                        System.out.println("IL GARAGE É COMPLETO! VEICOLO NON PARCHEGGIATO!");
-                                }else {
-                                    System.out.println("AUTO PARCHEGGIATA CON SUCCESSO NEL BOX NUMERO: " + garage.parcheggiaVeicolo(autoAgg));
-                                }
+                                System.out.println("AUTO PARCHEGGIATA CON SUCCESSO NEL BOX NUMERO: "+garage.parcheggiaVeicolo(autoAgg));
                                 System.out.println(" ");
                                 break;
                             }
