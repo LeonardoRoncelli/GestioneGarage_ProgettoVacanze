@@ -5,17 +5,12 @@ public class Garage {
     Veicolo []boxes=new Veicolo[500];
     public int parcheggiaVeicolo(Veicolo veicoloAgg){
         int numBox=-1;
-        boolean pieno=true;
         for(int i=0;i<boxes.length;i++){
             if(boxes[i]==null){
-                pieno=false;
                 boxes[i]=veicoloAgg;
                 numBox=i;
                 break;
             }
-        }
-        if(pieno){
-            System.out.println("IL GARAGE É COMPLETO! VEICOLO NON PARCHEGGIATO!");
         }
         return numBox;
     }

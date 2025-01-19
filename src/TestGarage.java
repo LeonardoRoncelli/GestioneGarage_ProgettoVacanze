@@ -57,7 +57,12 @@ public class TestGarage {
                                 }while (tempo<=0);
                                 Auto autoAgg=new Auto(targa,marca,modello, garage.calcolaPrezzo(tempo), tipologiaAgg);
                                 System.out.println(" ");
-                                System.out.println("AUTO PARCHEGGIATA CON SUCCESSO NEL BOX NUMERO: "+garage.parcheggiaVeicolo(autoAgg));
+                                int boxAssegnato= garage.parcheggiaVeicolo(autoAgg);
+                                if(boxAssegnato!=-1){
+                                    System.out.println("AUTO PARCHEGGIATA CON SUCCESSO NEL BOX NUMERO: "+boxAssegnato);
+                                }else{
+                                    System.out.println("IL GARAGE É COMPLETO! AUTO NON PARCHEGGIATA!");
+                                }
                                 System.out.println(" ");
                                 break;
                             }
@@ -89,7 +94,12 @@ public class TestGarage {
                                 }while (tempo<=0);
                                 Moto motoAgg=new Moto(targa,marca,modello, garage.calcolaPrezzo(tempo), cilindrata,tipologiaAgg);
                                 System.out.println(" ");
-                                System.out.println("MOTO PARCHEGGIATA CON SUCCESSO NEL BOX NUMERO: "+garage.parcheggiaVeicolo(motoAgg));
+                                int boxAssegnato= garage.parcheggiaVeicolo(motoAgg);
+                                if(boxAssegnato!=-1){
+                                    System.out.println("MOTO PARCHEGGIATA CON SUCCESSO NEL BOX NUMERO: "+boxAssegnato);
+                                }else{
+                                    System.out.println("IL GARAGE É COMPLETO! MOTO NON PARCHEGGIATA!");
+                                }
                                 System.out.println(" ");
                                 break;
                             }
@@ -120,7 +130,12 @@ public class TestGarage {
                                 }while (tempo<=0);
                                 Furgone furgoneAgg=new Furgone(targa,marca,modello, garage.calcolaPrezzo(tempo), numeroAssi,altezzaMax);
                                 System.out.println(" ");
-                                System.out.println("FURGONE PARCHEGGIATO CON SUCCESSO NEL BOX NUMERO: "+garage.parcheggiaVeicolo(furgoneAgg));
+                                int boxAssegnato= garage.parcheggiaVeicolo(furgoneAgg);
+                                if(boxAssegnato!=-1){
+                                    System.out.println("FURGONE PARCHEGGIATO CON SUCCESSO NEL BOX NUMERO: "+boxAssegnato);
+                                }else{
+                                    System.out.println("IL GARAGE É COMPLETO! FURGONE NON PARCHEGGIATO!");
+                                }
                                 System.out.println(" ");
                                 break;
                             }
