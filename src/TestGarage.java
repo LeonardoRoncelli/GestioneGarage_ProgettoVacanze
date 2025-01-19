@@ -133,7 +133,7 @@ public class TestGarage {
                     System.out.println(" ");
                     System.out.println("Ecco la lista di tutti i veicoli parhceggiati: ");
                     System.out.println(" ");
-                    garage.visualizzaTutti();
+                    System.out.println(garage.visualizzaTutti());
                     break;
                 }
                 case 4:{

@@ -19,20 +19,22 @@ public class Garage {
         }
         return numBox;
     }
-    public void visualizzaTutti(){
+    public String visualizzaTutti(){
+        String risultato="";
         int contaNull=0;
         for(int i=0;i<boxes.length;i++){
             if(boxes[i]!=null){
-                System.out.println("BOX "+i);
-                System.out.println(boxes[i].toString());
-                System.out.println(" ");
+                risultato+="BOX "+i+"\n";
+                risultato+=boxes[i].toString()+"\n";
+                risultato+="\n";
             }else {
                 contaNull++;
             }
         }
         if(contaNull==boxes.length){
-            System.out.println("NON CI SONO VEICOLI ALL'INTERNO DEL PARCHEGGIO!");
+            risultato+="NON CI SONO VEICOLI ALL'INTERNO DEL PARCHEGGIO!"+"\n";
         }
+        return risultato;
     }
     public int numBoxOccupati(){
         int contaOccupati=0;
