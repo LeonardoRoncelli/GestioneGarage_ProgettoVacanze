@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -159,5 +161,12 @@ public class Garage {
             e.printStackTrace();
         }
         return accessoConsentito;
+    }
+    public void cambioPassword(String nuovaPassword){
+        try(BufferedWriter bw=new BufferedWriter(new FileWriter("accesso.txt"))) {
+            bw.write(nuovaPassword);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

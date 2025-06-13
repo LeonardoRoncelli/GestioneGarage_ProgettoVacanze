@@ -4,6 +4,7 @@ public class TestGarage {
         Scanner input=new Scanner(System.in);
         Garage garage=new Garage();
         int scelta;
+        int contaErrori=0;
         do{
             System.out.println("Benvenuto, questo garage ha in totale 500 posti validi per auto, moto e furgoni. I box sono numerati da 0 a 499.\n"+
                     "1 - Parcheggia veicolo (verrà percheggiato nel primo box libero)\n"+
@@ -15,7 +16,8 @@ public class TestGarage {
                     "7 - Visualizza tutti i veicoli parcheggiati\n"+
                     "8 - Parcheggia veicolo in un box specifico\n"+
                     "9 - Modifica i dati di un veicolo\n"+
-                    "10 - Visualizza il ricavo totale (Solo per autorizzati)\n"+
+                    "10 - Visualizza il ricavo totale (Solo per autorizzati)\n" +
+                    "11 - Cambia password\n"+
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
             try {
@@ -431,10 +433,28 @@ public class TestGarage {
                         System.out.println(" ");
                         System.out.println("Ricavo totale aggiornato: " + garage.ricavoTotale() + " €");
                         System.out.println(" ");
-                    }else {
+                    }else{
                         System.out.println("Password errata!");
                         System.out.println(" ");
                     }
+                    break;
+                }
+                case 11:{
+                    String password;
+                    String nuovaPassword;
+                    boolean accessoConsentito=false;
+                    System.out.print("Inserisci la password per accedere alla sezione riservata e cambiare la password: ");
+                    password= input.next();
+                    accessoConsentito=garage.verificaPassword(password);
+                    if(accessoConsentito){
+                        System.out.print("Inserisci la nuova password: ");
+                        nuovaPassword= input.next();
+                        garage.cambioPassword(nuovaPassword);
+                        System.out.println("Password cambiata.");
+                    }else {
+                        System.out.println("Password errata!");
+                    }
+                    System.out.println(" ");
                     break;
                 }
                 default:
