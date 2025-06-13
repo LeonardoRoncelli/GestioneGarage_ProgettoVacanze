@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -144,5 +146,18 @@ public class Garage {
             }
         }
         return ricavo;
+    }
+    public boolean verificaPassword(String passwordInserita){
+        String passwordAttuale;
+        boolean accessoConsentito=false;
+        try(BufferedReader br=new BufferedReader(new FileReader("accesso.txt"))){
+            String linea=br.readLine();
+            if (linea.equals(passwordInserita)){
+                accessoConsentito=true;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return accessoConsentito;
     }
 }

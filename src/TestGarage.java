@@ -15,7 +15,7 @@ public class TestGarage {
                     "7 - Visualizza tutti i veicoli parcheggiati\n"+
                     "8 - Parcheggia veicolo in un box specifico\n"+
                     "9 - Modifica i dati di un veicolo\n"+
-                    "10 - Visualizza il ricavo totale\n"+
+                    "10 - Visualizza il ricavo totale (Solo per autorizzati)\n"+
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
             try {
@@ -422,9 +422,19 @@ public class TestGarage {
                     break;
                 }
                 case 10:{
-                    System.out.println(" ");
-                    System.out.println("Ricavo totale aggiornato: "+garage.ricavoTotale()+" €");
-                    System.out.println(" ");
+                    String password;
+                    boolean accessoConsentito=false;
+                    System.out.print("Inserisci la password per accedere alla sezione riservata e visualizzare il ricavo totale: ");
+                    password= input.next();
+                    accessoConsentito=garage.verificaPassword(password);
+                    if (accessoConsentito) {
+                        System.out.println(" ");
+                        System.out.println("Ricavo totale aggiornato: " + garage.ricavoTotale() + " €");
+                        System.out.println(" ");
+                    }else {
+                        System.out.println("Password errata!");
+                        System.out.println(" ");
+                    }
                     break;
                 }
                 default:
