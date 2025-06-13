@@ -169,4 +169,17 @@ public class Garage {
             e.printStackTrace();
         }
     }
+    public void salvaElenco(){
+        try(BufferedWriter bw=new BufferedWriter(new FileWriter("elencoVeicoli.txt"))) {
+            for(int i=0;i<boxes.length;i++){
+                if (boxes[i]!=null){
+                    bw.write(boxes[i].toString());
+                    bw.newLine();
+                    bw.newLine();
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

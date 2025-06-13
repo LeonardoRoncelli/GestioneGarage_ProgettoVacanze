@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class TestGarage {
     public static void main(String[]args){
@@ -16,8 +17,9 @@ public class TestGarage {
                     "7 - Visualizza tutti i veicoli parcheggiati\n"+
                     "8 - Parcheggia veicolo in un box specifico\n"+
                     "9 - Modifica i dati di un veicolo\n"+
-                    "10 - Visualizza il ricavo totale (Solo per autorizzati)\n" +
-                    "11 - Cambia password\n"+
+                    "10 - Visualizza il ricavo totale (solo per autorizzati)\n" +
+                    "11 - Cambia password (solo per autorizzati)\n" +
+                    "12 - Esporta elenco veicoli su file (solo per autorizzati)\n"+
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
             try {
@@ -455,6 +457,10 @@ public class TestGarage {
                         System.out.println("Password errata!");
                     }
                     System.out.println(" ");
+                    break;
+                }
+                case 12:{
+                    garage.salvaElenco();
                     break;
                 }
                 default:

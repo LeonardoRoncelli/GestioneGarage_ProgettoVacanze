@@ -1,0 +1,12 @@
+Targa dell'auto: aaa
+Marca dell'auto: aaa
+Modello dell'auto: aaa
+Tipologia dell'auto (es.: suv, station wagon...): aaa
+Prezzo del box: 10.5 €
+
+Targa dell'auto: qqq
+Marca dell'auto: qqq
+Modello dell'auto: qqq
+Tipologia dell'auto (es.: suv, station wagon...): qqq
+Prezzo del box: 10.5 €
+
