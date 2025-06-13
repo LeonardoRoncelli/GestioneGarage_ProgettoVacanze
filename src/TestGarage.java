@@ -461,6 +461,7 @@ public class TestGarage {
                 }
                 case 12:{
                     garage.salvaElenco();
+                    System.out.println(" ");
                     break;
                 }
                 default:
