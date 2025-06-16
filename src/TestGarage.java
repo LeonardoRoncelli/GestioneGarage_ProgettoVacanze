@@ -1,11 +1,9 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 public class TestGarage {
     public static void main(String[]args){
         Scanner input=new Scanner(System.in);
         Garage garage=new Garage();
         int scelta;
-        int contaErrori=0;
         do{
             System.out.println("Benvenuto, questo garage ha in totale 500 posti validi per auto, moto e furgoni. I box sono numerati da 0 a 499.\n"+
                     "1 - Parcheggia veicolo (verrà percheggiato nel primo box libero)\n"+
@@ -13,13 +11,13 @@ public class TestGarage {
                     "3 - Verifica stato di un box\n"+
                     "4 - Numero di box occupati\n"+
                     "5 - Numero di box liberi\n"+
-                    "6 - Ricerca di un veicolo attraverso la targa\n"+
+                    "6 - Ricerca di un veicolo attraverso la targa (solo per autorizzati)\n"+
                     "7 - Visualizza tutti i veicoli parcheggiati\n"+
                     "8 - Parcheggia veicolo in un box specifico\n"+
                     "9 - Modifica i dati di un veicolo\n"+
                     "10 - Visualizza il ricavo totale (solo per autorizzati)\n" +
                     "11 - Cambia password (solo per autorizzati)\n" +
-                    "12 - Esporta elenco veicoli su file (solo per autorizzati)\n"+
+                    "12 - Esporta elenco veicoli su file (solo per autorizzati)\n" +
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
             try {
@@ -460,8 +458,22 @@ public class TestGarage {
                     break;
                 }
                 case 12:{
-                    garage.salvaElenco();
-                    System.out.println(" ");
+                    String password;
+                    boolean accessoConsentito=false;
+                    System.out.print("Inserisci la password per accedere alla sezione riservata e salvare i dati su un file: ");
+                    password= input.next();
+                    accessoConsentito=garage.verificaPassword(password);
+                    if (accessoConsentito) {
+                        garage.salvaElenco();
+                        System.out.println(" ");
+                    }else{
+                        System.out.println("Password errata!");
+                        System.out.println(" ");
+                    }
+                    break;
+                }
+                case 13:{
+
                     break;
                 }
                 default:
