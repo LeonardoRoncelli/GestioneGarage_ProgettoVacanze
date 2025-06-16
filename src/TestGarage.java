@@ -18,6 +18,7 @@ public class TestGarage {
                     "10 - Visualizza il ricavo totale (solo per autorizzati)\n" +
                     "11 - Cambia password (solo per autorizzati)\n" +
                     "12 - Esporta elenco veicoli su file (solo per autorizzati)\n" +
+                    "13 - Visualizza il numero di auto presenti per marca inserita da te (solo per autorizzati)\n" +
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
             try {
@@ -493,7 +494,21 @@ public class TestGarage {
                     break;
                 }
                 case 13:{
-
+                    String password;
+                    boolean accessoConsentito=false;
+                    System.out.print("Inserisci la password per accedere alla sezione riservata e visualizzare il numero di veicoli per marca: ");
+                    password= input.next();
+                    accessoConsentito=garage.verificaPassword(password);
+                    if (accessoConsentito) {
+                        String marca;
+                        System.out.print("Inserisci la marca: ");
+                        marca= input.next();
+                        System.out.println("Veicoli "+marca+" presenti nel parcheggio: "+garage.contaPerMarca(marca));
+                        System.out.println(" ");
+                    }else{
+                        System.out.println("Password errata!");
+                        System.out.println(" ");
+                    }
                     break;
                 }
                 default:

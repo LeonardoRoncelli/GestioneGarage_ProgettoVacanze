@@ -182,4 +182,15 @@ public class Garage {
             e.printStackTrace();
         }
     }
+    public int contaPerMarca(String marca){
+        int conta=0;
+        for(int i=0;i<boxes.length;i++){
+            if(boxes[i]!=null){
+                if(boxes[i].getMarca().equalsIgnoreCase(marca)){
+                    conta++;
+                }
+            }
+        }
+        return conta;
+    }
 }
