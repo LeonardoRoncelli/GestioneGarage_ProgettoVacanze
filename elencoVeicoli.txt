@@ -1,12 +1,12 @@
-Targa dell'auto: HB654FC
+Targa dell'auto: SD324FV
 Marca dell'auto: Audi
 Modello dell'auto: A6
-Tipologia dell'auto (es.: suv, station wagon...): Station wagon
-Prezzo del box: 3.0 €
+Tipologia dell'auto (es.: suv, station wagon...): Statio wagon
+Prezzo del box: 4.5 €
 
-Targa dell'auto: SB876SA
-Marca dell'auto: Alfa Romeo
-Modello dell'auto: Stelvio
+Targa dell'auto: DF532WA
+Marca dell'auto: Range Rover
+Modello dell'auto: Vogue
 Tipologia dell'auto (es.: suv, station wagon...): SUV
-Prezzo del box: 9.0 €
+Prezzo del box: 6.0 €
 

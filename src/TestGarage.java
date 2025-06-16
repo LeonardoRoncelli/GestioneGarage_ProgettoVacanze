@@ -168,12 +168,22 @@ public class TestGarage {
                     break;
                 }
                 case 6:{
-                    String targa;
-                    System.out.println(" ");
-                    System.out.print("Inserisci la targa del veicolo da ricercare: ");
-                    targa= input.nextLine();
-                    System.out.println(garage.ricercaConTarga(targa));
-                    System.out.println(" ");
+                    String password;
+                    boolean accessoConsentito=false;
+                    System.out.print("Inserisci la password per accedere alla sezione riservata e verificare la presenza di un veicolo: ");
+                    password= input.next();
+                    accessoConsentito=garage.verificaPassword(password);
+                    if (accessoConsentito) {
+                        String targa;
+                        System.out.println(" ");
+                        System.out.print("Inserisci la targa del veicolo da ricercare: ");
+                        targa= input.next();
+                        System.out.println(garage.ricercaConTarga(targa));
+                        System.out.println(" ");
+                    }else{
+                        System.out.println("Password errata!");
+                        System.out.println(" ");
+                    }
                     break;
                 }
                 case 2:{
