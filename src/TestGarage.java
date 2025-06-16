@@ -12,7 +12,7 @@ public class TestGarage {
                     "4 - Numero di box occupati\n"+
                     "5 - Numero di box liberi\n"+
                     "6 - Ricerca di un veicolo attraverso la targa (solo per autorizzati)\n"+
-                    "7 - Visualizza tutti i veicoli parcheggiati\n"+
+                    "7 - Visualizza tutti i veicoli parcheggiati (solop per autorizzati)\n"+
                     "8 - Parcheggia veicolo in un box specifico\n"+
                     "9 - Modifica i dati di un veicolo\n"+
                     "10 - Visualizza il ricavo totale (solo per autorizzati)\n" +
@@ -147,10 +147,20 @@ public class TestGarage {
                     break;
                 }
                 case 7:{
-                    System.out.println(" ");
-                    System.out.println("Ecco la lista di tutti i veicoli parhceggiati: ");
-                    System.out.println(" ");
-                    System.out.println(garage.visualizzaTutti());
+                    String password;
+                    boolean accessoConsentito=false;
+                    System.out.print("Inserisci la password per accedere alla sezione riservata e visualizzare tutti i veicoli parcheggiati: ");
+                    password= input.next();
+                    accessoConsentito=garage.verificaPassword(password);
+                    if (accessoConsentito) {
+                        System.out.println(" ");
+                        System.out.println("Ecco la lista di tutti i veicoli parhceggiati: ");
+                        System.out.println(" ");
+                        System.out.println(garage.visualizzaTutti());
+                    }else{
+                        System.out.println("Password errata!");
+                        System.out.println(" ");
+                    }
                     break;
                 }
                 case 4:{
