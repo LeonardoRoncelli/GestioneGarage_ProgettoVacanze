@@ -12,13 +12,14 @@ public class TestGarage {
                     "4 - Numero di box occupati\n"+
                     "5 - Numero di box liberi\n"+
                     "6 - Ricerca di un veicolo attraverso la targa (solo per autorizzati)\n"+
-                    "7 - Visualizza tutti i veicoli parcheggiati (solop per autorizzati)\n"+
+                    "7 - Visualizza tutti i veicoli parcheggiati (solo per autorizzati)\n"+
                     "8 - Parcheggia veicolo in un box specifico\n"+
                     "9 - Modifica i dati di un veicolo\n"+
                     "10 - Visualizza il ricavo totale (solo per autorizzati)\n" +
                     "11 - Cambia password (solo per autorizzati)\n" +
                     "12 - Esporta elenco veicoli su file (solo per autorizzati)\n" +
                     "13 - Visualizza il numero di auto presenti per marca inserita da te (solo per autorizzati)\n" +
+                    "14 - Calcola la media del prezzo dei parcheggi (solo per autorizzati)\n" +
                     "0 - Esci");
             System.out.print("Scegli un'opzione: ");
             try {
@@ -504,6 +505,22 @@ public class TestGarage {
                         System.out.print("Inserisci la marca: ");
                         marca= input.next();
                         System.out.println("Veicoli "+marca+" presenti nel parcheggio: "+garage.contaPerMarca(marca));
+                        System.out.println(" ");
+                    }else{
+                        System.out.println("Password errata!");
+                        System.out.println(" ");
+                    }
+                    break;
+                }
+                case 14:{
+                    String password;
+                    boolean accessoConsentito=false;
+                    System.out.print("Inserisci la password per accedere alla sezione riservata e visualizzare la media del prezzo dei parcheggi: ");
+                    password= input.next();
+                    accessoConsentito=garage.verificaPassword(password);
+                    if (accessoConsentito) {
+                        System.out.print("Media del prezzo dei parcheggi: "+garage.mediaPrezzo()+" €");
+                        System.out.println(" ");
                         System.out.println(" ");
                     }else{
                         System.out.println("Password errata!");

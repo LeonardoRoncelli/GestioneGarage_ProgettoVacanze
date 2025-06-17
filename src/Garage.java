@@ -193,4 +193,20 @@ public class Garage {
         }
         return conta;
     }
+    public double mediaPrezzo(){
+        double somma=0;
+        int conta=0;
+        for(int i=0;i<boxes.length;i++){
+            if (boxes[i]!=null) {
+                somma += boxes[i].getPrezzoBox();
+                conta++;
+            }
+        }
+        if(conta>0){
+            return somma/conta;
+
+        }else {
+            return 0;
+        }
+    }
 }
