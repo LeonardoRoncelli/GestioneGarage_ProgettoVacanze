@@ -209,4 +209,17 @@ public class Garage {
             return 0;
         }
     }
+    public void salvaElencoInUscita(){
+        try(BufferedWriter bw=new BufferedWriter(new FileWriter("elencoVeicoli.txt",true))) {
+            for(int i=0;i<boxes.length;i++){
+                if (boxes[i]!=null){
+                    bw.write(boxes[i].toString());
+                    bw.newLine();
+                    bw.newLine();
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

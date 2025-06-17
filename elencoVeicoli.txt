@@ -12,3 +12,10 @@ Tipologia dell'auto (es.: suv, station wagon...): SUV
 Prezzo del box: 6.0 €
 Orario di entrata: 17/06/2025 09:14:22
 
+Targa dell'auto: DF325MD
+Marca dell'auto: Mercedes-Benz
+Modello dell'auto: C63
+Tipologia dell'auto (es.: suv, station wagon...): Berlina
+Prezzo del box: 4.5 €
+Orario di entrata: 17/06/2025 09:20:06
+

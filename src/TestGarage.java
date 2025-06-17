@@ -17,7 +17,7 @@ public class TestGarage {
                     "9 - Modifica i dati di un veicolo\n"+
                     "10 - Visualizza il ricavo totale (solo per autorizzati)\n" +
                     "11 - Cambia password (solo per autorizzati)\n" +
-                    "12 - Esporta elenco veicoli su file (solo per autorizzati)\n" +
+                    "12 - Esporta l'elenco dei veicoli su file. QUESTA OPZIONE SOVRASCRIVE L'ELENCO PRECEDENTEMENTE SALVATO (solo per autorizzati)\n" +
                     "13 - Visualizza il numero di auto presenti per marca inserita da te (solo per autorizzati)\n" +
                     "14 - Calcola la media del prezzo dei parcheggi (solo per autorizzati)\n" +
                     "0 - Esci");
@@ -441,6 +441,7 @@ public class TestGarage {
                     break;
                 }
                 case 0:{
+                    garage.salvaElencoInUscita();
                     System.out.println(" ");
                     System.out.println("Arrivederci!");
                     break;
