@@ -487,6 +487,7 @@ public class TestGarage {
                     accessoConsentito=garage.verificaPassword(password);
                     if (accessoConsentito) {
                         garage.salvaElenco();
+                        System.out.println("Dati salvati su file");
                         System.out.println(" ");
                     }else{
                         System.out.println("Password errata!");

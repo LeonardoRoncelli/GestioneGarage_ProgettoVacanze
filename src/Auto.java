@@ -15,6 +15,7 @@ public class Auto extends Veicolo{
                 "Marca dell'auto: "+getMarca()+"\n"+
                 "Modello dell'auto: "+getModello()+"\n"+
                 "Tipologia dell'auto (es.: suv, station wagon...): "+getTipologia()+"\n"+
-                "Prezzo del box: "+getPrezzoBox()+" €";
+                "Prezzo del box: "+getPrezzoBox()+" €"+"\n"+
+                "Orario di entrata: "+getDataOraInserimentoFormattata();
     }
 }

@@ -1,12 +1,14 @@
-Targa dell'auto: SD324FV
+Targa dell'auto: VG342EF
 Marca dell'auto: Audi
 Modello dell'auto: A6
-Tipologia dell'auto (es.: suv, station wagon...): Statio wagon
+Tipologia dell'auto (es.: suv, station wagon...): Station wagon
 Prezzo del box: 4.5 €
+Orario di entrata: 17/06/2025 09:13:59
 
-Targa dell'auto: DF532WA
+Targa dell'auto: BG576KL
 Marca dell'auto: Range Rover
 Modello dell'auto: Vogue
 Tipologia dell'auto (es.: suv, station wagon...): SUV
 Prezzo del box: 6.0 €
+Orario di entrata: 17/06/2025 09:14:22
 

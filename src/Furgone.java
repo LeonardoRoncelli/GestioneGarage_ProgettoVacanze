@@ -24,6 +24,7 @@ public class Furgone extends Veicolo{
                 "Modello del furgone: "+getModello()+"\n"+
                 "Numero di assi del furgone: "+numeroAssi+"\n"+
                 "Altezza massima del furgone: "+altezzaMax+"\n"+
-                "Prezzo del box: "+getPrezzoBox()+" €";
+                "Prezzo del box: "+getPrezzoBox()+" €"+"\n"+
+                "Orario di entrata: "+getDataOraInserimentoFormattata();
     }
 }
